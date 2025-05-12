@@ -1,5 +1,6 @@
 using APIUsuarios.Models;
 using APIUsuarios.Models.Context;
+using APIUsuarios.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,6 +13,8 @@ builder.Services.AddDbContext<UsuarioDbContext>(
         opts.UseNpgsql(builder.Configuration.GetConnectionString("UserConnection"));
     }
     );
+builder.Services.AddScoped<IdentityUserService>();
+
 builder.Services.AddIdentity<Usuario, IdentityRole>()
     .AddEntityFrameworkStores<UsuarioDbContext>()
     .AddDefaultTokenProviders();
