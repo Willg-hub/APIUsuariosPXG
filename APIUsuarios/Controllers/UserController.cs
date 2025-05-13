@@ -20,7 +20,7 @@ namespace APIUsuarios.Controllers
             _identityUserService = identityUserService;
         }
 
-        [HttpPost]
+        [HttpPost("Cadastro")]
         public async Task<IActionResult> CadastrarUsuario(CreateUserDto dto)
         {
 
@@ -29,5 +29,11 @@ namespace APIUsuarios.Controllers
 
         }
 
+        [HttpPost("Login")]
+        public async Task<IActionResult> LoginAsync(LoginUserDto dto)
+        {
+            await _identityUserService.Login(dto);
+            return Ok("Usuário autenticado");
+        }
     }
 }

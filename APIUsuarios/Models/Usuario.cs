@@ -8,6 +8,8 @@ namespace APIUsuarios.Models
         
         public string ChaveValidacao { get; set; }
 
+        public string NomeUsuario { get; set; }
+
         public Usuario() : base()
         {
             

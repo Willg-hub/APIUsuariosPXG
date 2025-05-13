@@ -4,7 +4,7 @@ namespace APIUsuarios.Models.Dtos
 {
     public class CreateUserDto
     {
-        [Required]
+
         public string UserName { get; set; }
 
         [Required]
@@ -13,6 +13,9 @@ namespace APIUsuarios.Models.Dtos
         
         [Required]
         public string Ip { get; set; }
+
+        [Required]
+        public string NomeUsuario { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
