@@ -2,6 +2,6 @@
 
 Tecnologias:
 
-Banco de dados postgres;
-ASP.NET;
-Identity Framewrok;
+-Banco de dados postgres;
+-ASP.NET;
+-Identity Framewrok;
